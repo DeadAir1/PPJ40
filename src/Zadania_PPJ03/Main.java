@@ -31,5 +31,7 @@ public class Main {
         int b=scanner.nextInt();
         int c=scanner.nextInt();
 
+
+        System.out.println("a: " + a + " b: " + b + " c: " + c);
     }
 }
