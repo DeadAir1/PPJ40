@@ -30,6 +30,9 @@ public class Main {
         int a=scanner.nextInt();
         int b=scanner.nextInt();
         int c=scanner.nextInt();
+        if(a<b && b<c) a= scanner.nextInt();
+        if(b<a && a<c ) b= scanner.nextInt();
+
 
 
         System.out.println("a: " + a + " b: " + b + " c: " + c);
