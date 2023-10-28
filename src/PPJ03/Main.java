@@ -61,28 +61,6 @@ public class Main {
 
 
         //Zad 5
-   /*     int a1=4;
-        int a2=15;
-        int b1=7;
-        int b2=20;
-        Scanner scanner=new Scanner(System.in);
-        int x=scanner.nextInt();
-        scanner.close();
-            boolean inA= (x>=a1 && x<=a2);
-            boolean inB= (x>=b1 && x<=b2);
-            boolean roznicaA = (x>=a1 && x<b1);    ;
-            boolean roznicaB= (x>a2);
-            boolean iloczyn=(x>=b1 && x<=a2);
-            boolean suma=(x>=a1 &&  x<=b2);
-            boolean roznicaSymetryczna=(x>=a1 && x<b1) || (x>a2 && x<=b2);
-                System.out.println("Interval A: " + "[" + a1 + "," +a2 + "]\n" +
-                        "Interval B: " +"[" + b1 + "," +b2 + "]\n" +
-                        "x in A: " + "       " +  inA + '\n' +
-                        "x in B: " + "       " +  inB + '\n' +
-                        "x in A/B:" + "      " + roznicaA + '\n' +
-                        "x in B/A:" + "      " + roznicaB + '\n' +
-                        "x iloczyn:"+ "     " + iloczyn + '\n' +
-                        "x suma:" + "        " + suma + '\n' +
-                        "x roznica symetryczna: " + "      " +roznicaSymetryczna );*/
-    }
+   /*                               */
+    }                                                                                                                             
 }
