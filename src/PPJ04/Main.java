@@ -98,25 +98,40 @@ public class Main {
         }
         System.out.println(answer);*/
             //Zad 6
-        Scanner scanner=new Scanner(System.in);
+       /* Scanner scanner=new Scanner(System.in);
         boolean figura=false;
         System.out.print("Podaj liczbe - > ");
         int liczba= scanner.nextInt();
         System.out.print("Wpisz nazwe figury - >");
         String nazwaFigury= scanner.next();
-        figura=nazwaFigury.equals("disc") ^ nazwaFigury.equals("triangle") ^ nazwaFigury.equals("square") ^ nazwaFigury.equals("rand");
-        if(!figura) {
-            System.out.println("Niepoprawna figura");
-            return ;
-        }
         double pole=0;
+        int losowaRand=(int)(Math.random()*3+1);
         switch(nazwaFigury){
             case "disc":pole=3.14 * Math.pow(liczba,2);
+                System.out.println(pole);
             break;
             case "triangle":pole=(Math.pow(liczba,2)/2)*(Math.sqrt(3)/2);
+                System.out.println(pole);
+            break;
+            case "square" : pole=liczba*liczba;
+                System.out.println(pole);
+            break;
+            case "rand" : switch(losowaRand){
+                case 1:pole=3.14 * Math.pow(liczba,2);
+                    System.out.println("Figura disc i pole: " + pole);
+                    break;
+                case 2:pole=(Math.pow(liczba,2)/2)*(Math.sqrt(3)/2);
+                    System.out.println("Figura triangle i pole: " + pole);
+                    break;
+                case 3: pole=liczba*liczba;
+                    System.out.println("Figura square i pole: " + pole);
+                    break;
+            }
+            break;
             default:
-        }
-        System.out.println(pole);
+                System.out.println("Niepoprawna Figura");
+        }*/
+
 
 
 
