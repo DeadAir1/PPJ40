@@ -94,7 +94,7 @@ public class Main {
         System.out.println("I w koncu twoj numer studenta: " + "S" + numerStudenta);
 */
 
-        //revervrevrwrererev
+
     }
 
 

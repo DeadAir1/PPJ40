@@ -55,7 +55,68 @@ public class Main {
         System.out.println(sex1);
 */
             //Zad 5
+           /* int kolor=(int)((Math.random()*4)+1);
+        int karta=(int)(Math.random()*14+2);
+      String answer= " ";
 
+        switch(karta){
+            case 2: answer="Dwójka";
+                break;
+            case 3: answer="Trójka";
+                break;
+            case 4: answer="Czwórka";
+                break;
+            case 5: answer="Piątka";
+                break;
+            case 6: answer="Szóstka";
+                break;
+            case 7: answer="Siódemka";
+                break;
+            case 8: answer="Ósemka";
+                break;
+            case 9: answer="Dziewiątka";
+                break;
+            case 10: answer="Dziesiątka";
+                break;
+            case 11: answer="Wallet";
+                break;
+            case 12: answer="Dama";
+                break;
+            case 13: answer="Król";
+                break;
+            default:answer="As";
+        }
+
+        switch(kolor){
+            case 1: answer+=" Trefl";
+            break;
+            case 2: answer+=" Taro";
+            break;
+            case 3: answer+=" Tier";
+            break;
+            default :answer+=" Pik";
+        }
+        System.out.println(answer);*/
+            //Zad 6
+        Scanner scanner=new Scanner(System.in);
+        boolean figura=false;
+        System.out.print("Podaj liczbe - > ");
+        int liczba= scanner.nextInt();
+        System.out.print("Wpisz nazwe figury - >");
+        String nazwaFigury= scanner.next();
+        figura=nazwaFigury.equals("disc") ^ nazwaFigury.equals("triangle") ^ nazwaFigury.equals("square") ^ nazwaFigury.equals("rand");
+        if(!figura) {
+            System.out.println("Niepoprawna figura");
+            return ;
+        }
+        double pole=0;
+        switch(nazwaFigury){
+            case "disc":pole=3.14 * Math.pow(liczba,2);
+            break;
+            case "triangle":pole=(Math.pow(liczba,2)/2)*(Math.sqrt(3)/2);
+            default:
+        }
+        System.out.println(pole);
 
 
 
