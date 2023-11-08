@@ -86,18 +86,20 @@ public class Main {
         int i=0;
         int max=1000000;
         int min=1;
-        int random=0;
+        int n=max;
         String answer=" ";
         while(i<20){
-            System.out.print("It's your answer? :" + random +" - >");
+            System.out.print("It's your answer? :" + n +" - >");
             answer=scanner.next();
             switch(answer){
-                case "b": max=random;
+                case "b":max=n;
+                n/=2;
                     break;
-                case "s": min=random;
+                case "s": min=n;
+                    n=(min+max)/2;
                     break;
                 case "y":
-                    System.out.println("Pomyslana liczba to: " + random);
+                    System.out.println("Pomyslana liczba to: " + n);
                     i=20;
                     break;
             }

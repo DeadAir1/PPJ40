@@ -59,44 +59,63 @@ public class Main {
         int karta=(int)(Math.random()*14+2);
       String answer= " ";
 
-        switch(karta){
-            case 2: answer="Dwójka";
-                break;
-            case 3: answer="Trójka";
-                break;
-            case 4: answer="Czwórka";
-                break;
-            case 5: answer="Piątka";
-                break;
-            case 6: answer="Szóstka";
-                break;
-            case 7: answer="Siódemka";
-                break;
-            case 8: answer="Ósemka";
-                break;
-            case 9: answer="Dziewiątka";
-                break;
-            case 10: answer="Dziesiątka";
-                break;
-            case 11: answer="Wallet";
-                break;
-            case 12: answer="Dama";
-                break;
-            case 13: answer="Król";
-                break;
-            default:answer="As";
-        }
+        answer = switch(karta){
+            case 2:
+                yield  "Dwójka";
 
-        switch(kolor){
-            case 1: answer+=" Trefl";
-            break;
-            case 2: answer+=" Taro";
-            break;
-            case 3: answer+=" Tier";
-            break;
-            default :answer+=" Pik";
-        }
+            case 3:
+                yield "Trójka";
+
+            case 4:
+                yield "Czwórka";
+
+            case 5:
+                yield "Piątka";
+
+            case 6:
+                yield "Szóstka";
+
+            case 7:
+                yield "Siódemka";
+
+            case 8:
+                yield "Ósemka";
+
+            case 9:
+                yield "Dziewiątka";
+
+            case 10:
+                yield "Dziesiątka";
+
+            case 11:
+                yield "Wallet";
+
+            case 12:
+                yield "Dama";
+
+            case 13:
+                yield "Król";
+
+            default:
+                yield "As";
+        };
+
+        answer+= switch(kolor){
+            case 1:
+                yield " Trefl";
+
+            case 2:
+                yield " Taro";
+
+            case 3:
+                yield " Tier";
+
+            default :yield " Pik";
+        };
         System.out.println(answer);*/
+
+
+
             //Zad 6
        /* Scanner scanner=new Scanner(System.in);
         boolean figura=false;
