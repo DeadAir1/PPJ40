@@ -81,7 +81,7 @@ public class Main {
 
 
         //Zad 4
-        Scanner scanner=new Scanner(System.in);
+       /* Scanner scanner=new Scanner(System.in);
         System.out.println("Trzymaj w glowie liczbe od 1:1 000 000");
         int i=0;
         int max=1000000;
@@ -104,10 +104,28 @@ public class Main {
                     break;
             }
             i++;
+        }*/
+            //Zad 5
+     /*   Scanner scanner =new Scanner(System.in);
+        int n= scanner.nextInt();
+        int a=n;
+        int b=0;
+        if(n % 2 == 0) System.out.println("Liczba musi byc nieparzysta");
+        else {
+            for (int i = 0; i <n; i++) {
+                for (int j = 0; j < a; j++) {
+                    System.out.print(" * ");
+                }
+                b++;
+                System.out.println('\n');
+                for (int j = 0; j <b ; j++) {
+                    System.out.print("   ");
+                }
+
+                a-=2;
+            }
         }
-
-
-
+*/
     }
 
 }
