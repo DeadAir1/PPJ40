@@ -1,21 +1,20 @@
 package PPJ06;
 
-import javax.imageio.metadata.IIOMetadataFormatImpl;
 import java.util.Scanner;
 
 public class Main {
-   /* private static int roll(){
+   private static int roll(){
         int i=0;
         int f=0;
         int s=0;
-        while(f!=6 && s!=6){
+       do{
          f=(int)(Math.random()*6+1);
          s=(int)(Math.random()*6+1);
          i++;
-    }
+    } while(f!=6 && s!=6);
 
     return i;
-    }*/
+    }
     public static void main(String[] args) {
         //Zad 1
         /*Scanner scanner=new Scanner(System.in);
@@ -102,15 +101,16 @@ public class Main {
 
         }*/
         //Zad 4
-   /*     System.out.println(roll());
         int first=0;
         int ninethy=0;
-        for (int i = 0; i <1000000 ; i++) {
+        int liczba_rolls=1000000;
+        for (int i = 0; i <liczba_rolls ; i++) {
                     if(roll()<90) first++;
                     else ninethy++;
         }
-        System.out.print("first ->"+first + ";" + "ninethy ->" + ninethy);
-*/
+        int first_procents=first/liczba_rolls*100;
+        int ninthy_procents=ninethy/liczba_rolls*100;
+        System.out.print("In first roll ->"+first_procents + "%"+ ";" +'\n' + "90 or more rolls ->" + ninthy_procents +"%"+ ";");
     }
 
 }
