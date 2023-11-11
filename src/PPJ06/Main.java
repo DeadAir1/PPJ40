@@ -7,12 +7,13 @@ public class Main {
         int i=0;
         int f=0;
         int s=0;
-       do{
+        boolean war=s==6 && f==6;
+      do{
          f=(int)(Math.random()*6+1);
          s=(int)(Math.random()*6+1);
          i++;
-    } while(f!=6 && s!=6);
-
+    } while(!war);
+       System.out.println(i);
     return i;
     }
     public static void main(String[] args) {
@@ -111,6 +112,7 @@ public class Main {
         int first_procents=first/liczba_rolls*100;
         int ninthy_procents=ninethy/liczba_rolls*100;
         System.out.print("In first roll ->"+first_procents + "%"+ ";" +'\n' + "90 or more rolls ->" + ninthy_procents +"%"+ ";");
+
     }
 
 }
