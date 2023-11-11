@@ -127,17 +127,10 @@ public class Main {
         int arr[]=new int[size];
         for (int i = 0; i < arr.length; i++) {
             arr[i]=(int)(Math.random()*10+1);
+            System.out.print(arr[i]+ " ");
         }
-        for (int i = 0; i <arr.length ; i++) {
-            int counter=0;
-            int element=arr[i];
-            for (int j = 0; j < arr.length; j++) {
-                if(element==arr[j]) counter++;
-            }
-            if(counter <= 1){
-                System.out.print(element);
-            }
-        }
+        System.out.println();
+
 
     }
 
