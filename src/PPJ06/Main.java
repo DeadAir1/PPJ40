@@ -7,12 +7,12 @@ public class Main {
         int i=0;
         int f=0;
         int s=0;
-        boolean war=s==6 && f==6;
+
       do{
          f=(int)(Math.random()*6+1);
          s=(int)(Math.random()*6+1);
          i++;
-    } while(!war);
+    } while(f==6 && s==6);
        System.out.println(i);
     return i;
     }
@@ -39,6 +39,11 @@ public class Main {
         for (int i = 0; i < w; i++) {
             System.out.print("*");
         }*/
+
+
+
+
+
         //Zad 2
       /*  Scanner scanner =new Scanner(System.in);
         System.out.print("Wpisz liczbe -> ");
@@ -53,6 +58,12 @@ public class Main {
                else System.out.print(liczba + "   ");
             }
         }*/
+
+
+
+
+
+
         //Zad 3
    /*     Scanner scanner =new Scanner (System.in);
         System.out.print("Wprowadz liczbe -> ");
@@ -101,6 +112,11 @@ public class Main {
             }
 
         }*/
+
+
+
+
+
         //Zad 4
         int first=0;
         int ninethy=0;
