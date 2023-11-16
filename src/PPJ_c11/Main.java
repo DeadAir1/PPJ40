@@ -101,7 +101,7 @@ public class Main {
 
 
         //Zad 6
-        long arr[]=new long[10];
+       /* long arr[]=new long[10];
         arr[0]=(int)(Math.random()*10+1);
         for (int i = 1; i <arr.length ; i++) {
             arr[i]=arr[i-1]+1;
@@ -114,6 +114,7 @@ public class Main {
             for (int i = 1; i <arr.length ; i++) {
                 if(arr[i]==arr[i-1]+1) counter++;
             }
-        }
+        }*/
+
     }
 }
