@@ -53,7 +53,7 @@ public class Main {
         }*/
 
     //Zad 4
-        int arrX[]=new int[10];
+      /*  int arrX[]=new int[10];
         int arrY[]=new int[10];
         for (int i = 0; i < arrX.length ; i++) {
             arrX[i]=(int)(Math.random()*10+1);
@@ -86,8 +86,15 @@ public class Main {
         System.out.println();
         System.out.println("Szerokosc -> " +szerokosc + '\n'
         +"Wysokosc -> " + wysokosc + '\n'
-        +"Wspolrzedne srodka - > x: " + szerokosc/2 + "  y: " + wysokosc/2);
+        +"Wspolrzedne srodka - > x: " + szerokosc/2 + "  y: " + wysokosc/2);*/
 
+        //Zad 5
+        int a[]={1,2,3,4,5};
+        int b[]={10,9,8,7,6};
+        int c[]=new int[10];
+        for (int i = 0; i < ; i++) {
+            
+        }
 
 
     }
