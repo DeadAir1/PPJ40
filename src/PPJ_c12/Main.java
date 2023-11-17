@@ -89,12 +89,110 @@ public class Main {
         +"Wspolrzedne srodka - > x: " + szerokosc/2 + "  y: " + wysokosc/2);*/
 
         //Zad 5
-        int a[]={1,2,3,4,5};
+        /*int a[]={1,2,3,4,5};
         int b[]={10,9,8,7,6};
-        int c[]=new int[10];
-        for (int i = 0; i < ; i++) {
-            
+        int c[]=new int[a.length+b.length];
+        for (int i = 0; i <a.length ; i++) {
+            c[i]=a[i];
+            c[i+(a.length)]=b[i];
         }
+        for (int i = 0; i < c.length-1; i++) {
+            for (int j = i+1; j <c.length ; j++) {
+                if(c[j]<c[i]){
+                    int t=c[j];
+                    c[j]=c[i];
+                    c[i]=t;
+
+                }
+            }
+        }
+        for(int abc :c){
+            System.out.print(abc + ",");
+        }*/
+        //Zad 6
+/*        int arr[]=new int[(int)(Math.random()*20+2)];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i]=(int)(Math.random()*20+1);
+        }
+        for (int i = 0; i < arr.length-1; i++) {
+            for (int j = i+1; j <arr.length ; j++) {
+                if(arr[j]<arr[i]){
+                    int t=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=arr[i];
+                }
+
+            }
+        }
+        for(int a: arr){
+            System.out.print(a + ",");
+        }
+        int counter=1;
+        for (int i = 1; i <arr.length ; i++) {
+            if(arr[i-1]!=arr[i]) counter++;
+        }
+        System.out.println();
+        System.out.print("Counter ->" + counter);*/
+    //Zad 7
+    /*    int arr[]=new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i]=(int)(Math.random()*20+1);
+        }
+        for (int i = 0; i < arr.length-1; i++) {
+            for (int j = i+1; j <arr.length ; j++) {
+                if(arr[j]<arr[i]){
+                    int t=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=arr[i];
+                }
+
+            }
+        }
+        for(int a: arr){
+            System.out.print(a + ",");
+        }
+        int counter=0;
+        int counter1=0;
+        int index=0;
+        for (int i = 0; i <arr.length ; i++) {
+            if(counter<counter1){
+            index=i-1;
+            counter=counter1;
+            }
+            counter1=0;
+            for (int j = i; j <arr.length ; j++) {
+                if(arr[j]==arr[i]) counter1++;
+            }
+
+        }
+        System.out.println();
+        System.out.println("Liczba pod indexem -> " + arr[index] + " wystopila -> " + counter + " razy");*/
+
+
+    //Zad 8
+        int a[]=new int[(int)(Math.random()*10+1)];
+        int b[]=new int[(int)(Math.random()*10+1)];
+        int c[]=new int[(int)(Math.random()*10+1)];
+
+        int size=a.length<b.length? a.length: b.length<c.length? b.length:c.length;
+        for (int i = 0; i < size; i++) {
+            a[i]=(int)(Math.random()*20+1);
+            b[i]=(int)(Math.random()*20+1);
+            c[i]=(int)(Math.random()*20+1);
+        }
+        int arr[][]={a,b,c};
+        for (int i = 0; i <arr.length ; i++) {
+            for (int j = 0; j <arr[i].length ; j++) {
+                System.out.print(arr[i][j]+",");
+            }
+            System.out.println();
+        }
+
+
+
+
+
+
 
 
     }
