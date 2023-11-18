@@ -4,61 +4,101 @@ import java.util.Scanner;
 
 public class Main {
     static void prGame(byte arr[]){
-        for (int i = 0; i <arr.length ; i++) {
-            if(i<3) System.out.print(arr[i] + " ");
-            if(i==3) System.out.println();
-            if(i>=3 && i<6) System.out.print(arr[i] + " ");
-            if(i==6) System.out.println();
-            if(i>=6) System.out.print(arr[i] + " ");
+        int counter=0;
+        for (int i = 0; i <arr.length/3 ; i++) {
+            for (int j =0; j <arr.length/3 ; j++) {
+                System.out.print(arr[j+counter] + " ");
+            }
+            System.out.println();
+            counter+=3;
         }
-        System.out.println();
     }
-    static boolean kolko(byte arr[]){
-        boolean ans=false;
-        for (int i = 0; i < arr.length/3; i++) {
-            if(arr[i])
+    static boolean repeat(int counterKolko, int counterKrzyzyk){
+        boolean win=false;
+        if(counterKrzyzyk==3) {
+            System.out.println("Grac 1 win");
+            return win=true;
         }
+        if(counterKolko==3) {
+            System.out.println("Grac 2 win");
+            return win=true;
+        }
+   return win; }
+    static boolean win( byte arr[]){
+       int line=0;
+       int counterKrzyzyk=0;
+       int counterKolko=0;
+       //spwawdzenie poziome
+        for (int i = 0; i <arr.length/3 ; i++) {
+            counterKrzyzyk=0;
+            counterKolko=0;
+            for (int j =0; j <arr.length/3 ; j++) {
+                if(arr[j+line]==2) counterKrzyzyk++;
+                if(arr[j+line]==1) counterKolko++;
+            }
+            repeat(counterKolko,counterKrzyzyk);
+            line+=3;
+        }
+        //sprawdzanie pionowe
+        int column=3;
+                int add=0;
+        for (int i = 0; i <arr.length/3 ; i++) {
+            counterKrzyzyk=0;
+            counterKolko=0;
+            add=0;
+            for (int j = 0; j <arr.length/3 ; j++) {
+                if(arr[add+i]==2) counterKrzyzyk++;
+                if(arr[add+i]==2) counterKolko++;
+                add+=3;
+            }
+            repeat(counterKolko,counterKrzyzyk);
+            column+=3;
+        }
+        //sprawdzanie przekatne left
+        counterKrzyzyk=0;
+        counterKolko=0;
+        for (int i = 0; i < arr.length; i+=4) {
+            if(arr[i]==2)  counterKrzyzyk++;
+            if(arr[i]==1) counterKolko++;
+        }
+        repeat(counterKolko,counterKrzyzyk);
+        //sprawdzanie przekatna prawe
+        counterKrzyzyk=0;
+        counterKolko=0;
+        for (int i = 2; i <=(arr.length*2)/3 ; i+=2) {
+            if(arr[i]==2)  counterKrzyzyk++;
+            if(arr[i]==1) counterKolko++;
+        }
+        repeat(counterKolko,counterKrzyzyk);
+   return false; }
 
 
-        return ans;
-    }
 
-    static boolean krzyyzyk(byte arr[]){
-        boolean ans=false;
-
-
-        return ans;
-    }
     public static void main(String[] args) {
         //Zad 1
-        Scanner in=new Scanner(System.in);
+     /*   Scanner in=new Scanner(System.in);
         byte arr[]=new byte[9];
-
         prGame(arr);
-        System.out.print("Grac 1 wybierz symbol -> ");
-        int symbol=in.nextInt();
-        boolean first = symbol == 2;
-
-        while(!kolko(arr) || !krzyyzyk(arr)){
-            int pozycja =0;
+        int pass=0;
+        while(pass!=9){
+            int pozyczja =0;
+            System.out.print("Grac 1 -> ");
+            pozyczja=in.nextByte();
+            arr[pozyczja]=2;
+            pass++;
             prGame(arr);
-            System.out.print("Grac 1 wybierz pozycje -> ");
-            pozycja=in.nextInt();
-            arr[pozycja]=first ? (byte)2 : (byte)1;
+            if(win(arr)) return ;
+            System.out.print("Grac 2 -> ");
+            pozyczja=in.nextByte();
+            arr[pozyczja]=1;
+            pass++;
             prGame(arr);
-            System.out.print("Grac 2 wybierz pozycje -> ");
-            pozycja=in.nextInt();
-            arr[pozycja]=first ? (byte)1 : (byte)2;
-            prGame(arr);
-        }
+            if(win(arr)) return;
+
+        }*/
 
 
 
-
-
-
-
-   /*     byte arr[]=new byte[9];*/
         //Zad 2
       /*  int arr[]={153,333,370,515,407,80};
         for (int i = 0; i <arr.length ; i++) {
@@ -77,7 +117,10 @@ public class Main {
             boolean ans=arr[i]==suma;
             System.out.println("Liczba -> " + arr[i] +" " + ans);
         }*/
-    //Zad 3
+
+
+
+        //Zad 3
      /*   int arrInt[]=new int[10];
         double arrDouble[]=new double[10];
         for (int i = 0; i <arrInt.length ; i++) {
@@ -107,7 +150,10 @@ public class Main {
             System.out.print(arrDouble[i] + ",");
         }*/
 
-    //Zad 4
+
+
+
+        //Zad 4
       /*  int arrX[]=new int[10];
         int arrY[]=new int[10];
         for (int i = 0; i < arrX.length ; i++) {
@@ -164,6 +210,9 @@ public class Main {
         for(int abc :c){
             System.out.print(abc + ",");
         }*/
+
+
+
         //Zad 6
 /*        int arr[]=new int[(int)(Math.random()*20+2)];
         for (int i = 0; i < arr.length; i++) {
@@ -188,6 +237,9 @@ public class Main {
         }
         System.out.println();
         System.out.print("Counter ->" + counter);*/
+
+
+
     //Zad 7
     /*    int arr[]=new int[10];
         for (int i = 0; i < arr.length; i++) {
@@ -261,12 +313,6 @@ public class Main {
         }
         System.out.println("Left sum -> " + left);
         System.out.println("Right sum -> " + right);*/
-
-
-
-
-
-
     }
 
 }
