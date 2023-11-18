@@ -1,8 +1,63 @@
 package PPJ_c12;
 
+import java.util.Scanner;
+
 public class Main {
+    static void prGame(byte arr[]){
+        for (int i = 0; i <arr.length ; i++) {
+            if(i<3) System.out.print(arr[i] + " ");
+            if(i==3) System.out.println();
+            if(i>=3 && i<6) System.out.print(arr[i] + " ");
+            if(i==6) System.out.println();
+            if(i>=6) System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+    static boolean kolko(byte arr[]){
+        boolean ans=false;
+        for (int i = 0; i < arr.length/3; i++) {
+            if(arr[i])
+        }
+
+
+        return ans;
+    }
+
+    static boolean krzyyzyk(byte arr[]){
+        boolean ans=false;
+
+
+        return ans;
+    }
     public static void main(String[] args) {
         //Zad 1
+        Scanner in=new Scanner(System.in);
+        byte arr[]=new byte[9];
+
+        prGame(arr);
+        System.out.print("Grac 1 wybierz symbol -> ");
+        int symbol=in.nextInt();
+        boolean first = symbol == 2;
+
+        while(!kolko(arr) || !krzyyzyk(arr)){
+            int pozycja =0;
+            prGame(arr);
+            System.out.print("Grac 1 wybierz pozycje -> ");
+            pozycja=in.nextInt();
+            arr[pozycja]=first ? (byte)2 : (byte)1;
+            prGame(arr);
+            System.out.print("Grac 2 wybierz pozycje -> ");
+            pozycja=in.nextInt();
+            arr[pozycja]=first ? (byte)1 : (byte)2;
+            prGame(arr);
+        }
+
+
+
+
+
+
+
    /*     byte arr[]=new byte[9];*/
         //Zad 2
       /*  int arr[]={153,333,370,515,407,80};
@@ -170,7 +225,7 @@ public class Main {
 
 
     //Zad 8
-        int a[]=new int[(int)(Math.random()*10+1)];
+       /* int a[]=new int[(int)(Math.random()*10+1)];
         int b[]=new int[(int)(Math.random()*10+1)];
         int c[]=new int[(int)(Math.random()*10+1)];
 
@@ -186,9 +241,26 @@ public class Main {
                 System.out.print(arr[i][j]+",");
             }
             System.out.println();
+        }*/
+            //Zad 9
+/*            float arr[][]=new float[8][8];
+        for (int i = 0; i < arr.length ; i++) {
+            for (int j = 0; j <arr[i].length ; j++) {
+                arr[i][j]=(int)(Math.random()*20+1);
+                System.out.print(arr[i][j]+ "   ");
+            }
+            System.out.println();
         }
-
-
+        float left=0;
+        for (int i = 0; i < arr.length; i++) {
+            left+=arr[i][i];
+        }
+        float right=0;
+        for (int i = arr.length-1; i >=0 ; i--) {
+            right+=arr[i][i];
+        }
+        System.out.println("Left sum -> " + left);
+        System.out.println("Right sum -> " + right);*/
 
 
 
