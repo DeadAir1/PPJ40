@@ -74,9 +74,9 @@ public class Main {
 
 
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
         //Zad 1
-     /*   Scanner in=new Scanner(System.in);
+  /*      Scanner in=new Scanner(System.in);
         byte arr[]=new byte[9];
         prGame(arr);
         int pass=0;
@@ -84,13 +84,17 @@ public class Main {
             int pozyczja =0;
             System.out.print("Grac 1 -> ");
             pozyczja=in.nextByte();
-            arr[pozyczja]=2;
+            if(arr[pozyczja]==0 && (pozyczja==1 || pozyczja==2))
+                arr[pozyczja]=2;
+            else System.out.println("This posytion is not empty");
             pass++;
             prGame(arr);
             if(win(arr)) return ;
             System.out.print("Grac 2 -> ");
             pozyczja=in.nextByte();
-            arr[pozyczja]=1;
+            if(arr[pozyczja]==0 && (pozyczja==1 || pozyczja==2))
+                arr[pozyczja]=1;
+            else System.out.println("This posytion is not empty");
             pass++;
             prGame(arr);
             if(win(arr)) return;

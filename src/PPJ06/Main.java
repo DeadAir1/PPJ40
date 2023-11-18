@@ -12,8 +12,8 @@ public class Main {
          f=(int)(Math.random()*6+1);
          s=(int)(Math.random()*6+1);
          i++;
-    } while(f==6 && s==6);
-       System.out.println(i);
+    } while(f!=6 || s!=f);
+       System.out.println( "f-> "+ f + " s-> " + s + " i ->"  + i);
     return i;
     }
     public static void main(String[] args) {
@@ -41,9 +41,6 @@ public class Main {
         }*/
 
 
-
-
-
         //Zad 2
       /*  Scanner scanner =new Scanner(System.in);
         System.out.print("Wpisz liczbe -> ");
@@ -58,10 +55,6 @@ public class Main {
                else System.out.print(liczba + "   ");
             }
         }*/
-
-
-
-
 
 
         //Zad 3
@@ -114,21 +107,18 @@ public class Main {
         }*/
 
 
-
-
-
         //Zad 4
-        int first=0;
+    /*    int first=0;
         int ninethy=0;
         int liczba_rolls=1000000;
         for (int i = 0; i <liczba_rolls ; i++) {
                     if(roll()<90) first++;
                     else ninethy++;
         }
-        int first_procents=first/liczba_rolls*100;
-        int ninthy_procents=ninethy/liczba_rolls*100;
+        int first_procents=(first*100)/liczba_rolls;
+        int ninthy_procents=(ninethy*100)/liczba_rolls;
         System.out.print("In first roll ->"+first_procents + "%"+ ";" +'\n' + "90 or more rolls ->" + ninthy_procents +"%"+ ";");
 
+    */
     }
-
 }

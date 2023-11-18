@@ -120,7 +120,7 @@ public class Main {
         }*/
 
         //Zad 5
-        Scanner scanner =new Scanner(System.in);
+       /* Scanner scanner =new Scanner(System.in);
         System.out.print("Podaj rozmiar tablicy -> ");
         int size=scanner.nextInt();
         scanner.close();
@@ -130,9 +130,20 @@ public class Main {
             System.out.print(arr[i]+ " ");
         }
         System.out.println();
+            int counter =0;
+        for (int i = 0; i < arr.length ; i++) {
+            counter=0;
+            for (int j = 0; j <arr.length; j++) {
+                if(arr[i]==arr[j]) counter++;
+            }
+            if(counter<=1) System.out.print(arr[i] + " ");
+
+        }
+*/
 
 
     }
+
 
 
 
