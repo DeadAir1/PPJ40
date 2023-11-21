@@ -1,7 +1,10 @@
 package PPJ_c07;
 
+
+import java.util.Scanner;
+
 class Main{
-    public static void main(String [] args ){
+    public static void main(String [] args ) {
         //Zad 1
 	/*
 	Scanner scanner=new Scanner(System.in);
@@ -55,10 +58,31 @@ class Main{
 		System.out.println("Jest");
 	}else System.out.println("Nie jest");*/
 
+//Zad 5
+    /*    java.util.Scanner in =new java.util.Scanner(System.in);
+        double a=in.nextDouble();
+        double b=in.nextDouble();
+        in.close();
+        boolean same=a-b<0.01;
+        System.out.println(same);*/
+
+
+
+        //Zad 6
+
+   Scanner in=new Scanner(System.in);
+   int i=in.nextInt();
+        for (int j = 0; j <i ; j++) {
+            System.out.println();
+            for (int k = i-j; k >=0 ; k--) {
+                System.out.print("*");
+            }
+        }
+
 
     }
 
 
+    }
 
 
-}

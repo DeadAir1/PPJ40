@@ -1,6 +1,20 @@
 package PPJ03;
 
+import java.util.Scanner;
+
+
 public class Main {
+
+    static boolean prime(int liczba){
+        for (int i = 3; i <liczba/2+1 ; i++) {
+             if(liczba%i==0) {
+
+                 return false;
+             }
+        }
+
+    return true;
+    }
     public static void main(String[] args) {
         //Zad 1
        /* Scanner scanner = new Scanner(System.in);
@@ -61,6 +75,22 @@ public class Main {
 
 
         //Zad 5
-   /*                               */
+
+
+
+
+
+
+
+
+        //Zad 6
+
+        Scanner in =new Scanner(System.in);
+        System.out.print("Wprowadz liczbe ->  ");
+        int liczba=in.nextInt();
+        
+        in.close();
+
+
     }                                                                                                                             
 }

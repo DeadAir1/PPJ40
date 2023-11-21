@@ -126,6 +126,13 @@ public class Main {
             }
         }
 */
+       int counter=0;
+        int i;
+       Scanner in =new Scanner(System.in);
+       while(( i = in.nextInt() ) !=0) {
+            if(i%2!=0) counter++;
+        }
+        System.out.println(counter);
     }
 
 }
