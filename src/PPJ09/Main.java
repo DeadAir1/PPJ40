@@ -4,12 +4,8 @@ public class Main {
 
     //FUNKCJA DLA ZADANIA 2
     static void function(int [][]arr){
-        int sumRow=0;
-        int sumCol=0;
-        int counterRow=0;
-        int counterCol=0;
-        int rowNumber=0;
-        int colNumber=0;
+        int sumRow=0, sumCol=0,counterRow=0,
+         counterCol=0, rowNumber=0, colNumber=0;
         for (int i = 0; i <arr.length ; i++) {
             counterRow=0;
             counterCol=0;
