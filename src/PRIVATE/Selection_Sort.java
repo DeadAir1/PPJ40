@@ -1,6 +1,6 @@
-package PPJ_c12;
+package PRIVATE;
 
-public class SelectSort {
+public class Selection_Sort {
     public static void main(String[] args) {
         int arr[]={4,5,-2,4,-1,6,-7,5};
 
@@ -18,3 +18,4 @@ public class SelectSort {
         }
     }
 }
+
