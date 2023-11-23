@@ -69,14 +69,9 @@ class Main{
 
 
         //Zad 6
-
-   Scanner in=new Scanner(System.in);
-   int i=in.nextInt();
-        for (int j = 0; j <i ; j++) {
-            System.out.println();
-            for (int k = i-j; k >=0 ; k--) {
-                System.out.print("*");
-            }
+        System.out.println("Hello");
+        for (int i = 0; i <10 ; i++) {
+            System.out.println("i");
         }
 
 
