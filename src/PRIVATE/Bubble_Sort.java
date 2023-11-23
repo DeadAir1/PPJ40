@@ -1,5 +1,7 @@
 package PRIVATE;
 
+import java.util.Arrays;
+
 public class Bubble_Sort {
     public static void main(String[] args) {
         int arr[]={507,303,34,125,8,23};
@@ -14,5 +16,6 @@ public class Bubble_Sort {
             }
         }
         for(int a:arr) System.out.print(a + " " );
+
     }
 }

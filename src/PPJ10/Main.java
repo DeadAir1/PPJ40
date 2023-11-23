@@ -3,6 +3,8 @@ package PPJ10;
 import java.util.Arrays;
 
 public class Main {
+
+    //FUNKCJA DO ZAD 1
     public static int[] func(int[][] arr){
         int arr1[]=new int[2];
         int counterPair=0;
@@ -17,6 +19,7 @@ public class Main {
         arr1[1]=counterNotPair;
     return arr1;
     }
+    //FUNKCJA DO ZAD 2
     static int indeksPanstwa(String panstwo){
         int indeks=switch (panstwo){
             case "Germany":
@@ -35,7 +38,7 @@ public class Main {
         return indeks;
 
     }
-
+//FUNKCJA DO ZAD 4
     static int[][] inner(int arr[][]){
         int counter=0,counter2=0;
         int arr1[][]=new int[arr.length-2][arr[1].length-2];
@@ -49,6 +52,8 @@ public class Main {
         }
     return arr1;
     }
+
+    //FUNKCJA DO ZAD 5
     static int[][] trans(int arr[][]){
         int arr1[][]=new int[arr[0].length][arr.length];
         for (int i = 0; i < arr.length; i++) {
@@ -58,6 +63,53 @@ public class Main {
         }
         return arr1;
     }
+
+    //FUNKCJA DO ZAD 6
+    static boolean function(double arr[][]){
+        boolean straight=true;
+        for (int i = 1; i < arr.length ; i++) {
+            if(arr[i-1].length!=arr[i].length) straight=false;
+       }
+        if(!straight){
+            System.out.println("Tablica nie pasująca");
+            return false;
+        }
+        boolean isRectangular=arr.length!=arr[0].length;
+        boolean isSquare=arr.length==arr[0].length;
+        boolean isSymetric=false;
+        if(isSquare){
+            isSymetric=true;
+            for (int i = 0; i <arr.length ; i++) {
+                for (int j = 0; j < arr[i].length; j++) {
+                    if(arr[i][j]!=arr[j][i]) isSymetric=false;
+                }
+            }
+        }
+        System.out.printf("Tablica jest prostokątna -> %b \n" +
+                "Tablica jest kwadratowa -> %b \n" +
+                "Tablica jest symetryczna -> %b ",isRectangular,isSquare,isSymetric);
+
+    return true;
+    }
+    //FUNKCJA DO 6 ZADANIA 2
+    static void function2(double[][] arr,double[][] arr1){
+       boolean isSameShape=true;
+        boolean isSame=true;
+        if(arr.length!=arr1.length) isSameShape=false;
+       else{
+           for (int i = 0; i < arr.length ; i++) {
+               if(arr[i].length!=arr1[i].length) isSameShape=false;
+           }
+       }
+        for (int i = 0; i <arr.length ; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if(arr[i][j]!=arr1[i][j]) isSame=false;
+            }
+        }
+        System.out.printf("isSameShaps -> %b \n" +
+                "isSame -> %b",isSameShape,isSame);
+    }
+
     public static void main(String[] args) {
         //Zad 1
         /*int arr[][]={{1,2,3,4,5},{1,9},{3,1,8}};
@@ -139,13 +191,12 @@ public class Main {
 
 
 
-
-
-
-
-
-
-
-
+        //Zad 6
+        /*double [][] arr = { {1,2,3,4,5,6},
+                            {2,3,4,5,6,7},
+                            {3,4,5,6,7,8},
+                            {4,5,6,7,8,9}
+        };
+        function(arr);*/
     }
 }
