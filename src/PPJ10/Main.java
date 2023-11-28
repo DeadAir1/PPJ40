@@ -22,17 +22,13 @@ public class Main {
     //FUNKCJA DO ZAD 2
     static int indeksPanstwa(String panstwo){
         int indeks=switch (panstwo){
-            case "Germany":
-                yield 0;
-            case "Ireland":
-                yield 1;
-            case "Poland":
-                yield 2;
-            case "Scotland":
-                yield 3;
-            default :
-                System.out.println("Nie ma tego panstwa");
-                yield -1;
+            case "Germany"->0;
+
+            case "Ireland"->1;
+            case "Poland"->2;
+            case "Scotland" ->3;
+            default -> -1;
+
 
         };
         return indeks;
