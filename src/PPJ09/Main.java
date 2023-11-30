@@ -2,6 +2,7 @@ package PPJ09;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
 
@@ -59,10 +60,69 @@ public class Main {
 
     //FUNKCJA DO ZADANIA 4
 
-    static void rotateMatrix(int arr[][]){
+    static int[][] rotateMatrix(int arr[][]){
+        int counter=0;
+        int arr1[][]=new int[4][4];
+        for (int i = arr.length-1; i >=0 ; i--) {
+            for (int j = 0; j < arr.length; j++) {
+                arr1[j][counter]=arr[i][j];
+            }
+            counter++;
+        }
+
+
+   return arr1;
+    }
+
+    static void printMatrix(int arr[][]){
+        for (int i = 0; i <arr.length ; i++) {
+            for (int j = 0; j <arr[i].length ; j++) {
+                if(arr[i][j]<10 && arr[i][j]>=0)
+                System.out.print( "  " + arr[i][j]);
+            else  System.out.print(" " + arr[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
+
+    //FUNKCJA DO ZADANIA 5
+
+    static void zerosMatrix(int arr[][]){
+        int counter=0;
+        for (int i = 0; i <arr.length ; i++) {
+            for (int j = 0; j <arr[i].length ; j++) {
+                if(arr[i][j]==0) {
+                    counter++;
+                    break;
+                }
+            }
+        }
+        int x[]=new int[counter];
+        int y[]=new int[counter];
+        counter=0;
+        for (int i = 0; i <arr.length ; i++) {
+            for (int j = 0; j <arr[i].length ; j++) {
+                if(arr[i][j]==0) {
+                     x[counter]=j;
+                     y[counter]=i;
+                     counter++;
+                        break;
+                }
+            }
+        }
+        for (int  i= 0; i <y.length ; i++) {
+            for (int j = 0; j <arr[0].length ; j++) {
+                arr[y[i]][j]=0;
+            }
+            for (int j = 0; j <arr.length ; j++) {
+                arr[j][x[i]]=0;
+            }
+        }
 
     }
-    public static void main(String[] args) {
+    public static void main(
+            String[] args) {
         //Zad 1
         /*int[][] arr = {
                 {1,2,3,4,5,6},
@@ -103,6 +163,46 @@ public class Main {
                 {9,7,5,3},
                 {8,6,4,2}
         };
+        printMatrix(arr);
+        rotateMatrix(arr);
+        System.out.println("---------------------------");
+        printMatrix(rotateMatrix(arr));
 
-               }
+        //Zad 5
+      /*  int[][] arr = {
+                {  4,  9, 10,  0,  1,  2 },
+                {  7, -8, 20,  1,  5,  8 },
+                {  1,  8,  3,  2,  1, -3 },
+                {  1,  8, -3,  2, 11, -3 },
+                { 17,  0,  5, -9, 21, 10 }
+        };
+        printMatrix(arr);
+        zerosMatrix(arr);
+        System.out.println("-----------------------------------------------------");
+        printMatrix(arr);*/
+
+
+
+ //Zad 6
+       /* String[][] arr =
+                { {"Kenya",  "Nairobi"},
+                        {"Rwanda", "Kigali"},
+                        {"Gambia", "Banjul"},
+                        {"Ghana",  "Accra"},
+                        {"Niger",  "Niamey"},
+                        {"Zambia", "Lusaka"} };
+        Scanner in=new Scanner(System.in);
+        String pobrane=in.next().toLowerCase();
+        String answer="";
+        for (int i = 0; i <arr.length ; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                if(arr[i][0].equalsIgnoreCase(pobrane)){
+                    answer=arr[i][1];
+                }
+            }
+        }
+        System.out.println("It's your answer -> " + answer);*/
+
+
+    }
 }
