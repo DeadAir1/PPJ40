@@ -37,12 +37,25 @@ public class FuncStat {
             }
             return a;
         }
-        public static int maxElem(int arr[],int from){
-            int max=arr[from];
-            if(from<arr.length){
+       /* public static int maxElem(int arr[],int from) {
+            if(from<arr.length-1)
+                return
+        return 0;
+        }*/
+    public static int numEven(int []arr,int from){
+        if(from<arr.length-1)
+            return arr[from]%2==0 ? 1 + numEven(arr,++from) : numEven(arr,++from);
+        return 0;
+    }
+    public static void reverse(int arr[],int from){
+        if(from<arr.length-1) {
+            int tmp = arr[(arr.length - 1) - from];
+            arr[(arr.length - 1) - from]=arr[from];
+            arr[from]=tmp;
+         reverse(arr,1+from);
+        }
 
-            }
-        return 0;}
+    }
 
     public static void main(String[] args) {
         System.out.println("fiboR->" + fiboR(5));
@@ -51,6 +64,12 @@ public class FuncStat {
         System.out.println("factI->" + factI(5));
         System.out.println("gcdR->" + gcdR(12,18));
         System.out.println("gcdI->" + gcdI(12,18));
+        int[] arr = {2,3,2,4,3,1,6,3,2,3};
+       // System.out.println("Max element-> " + maxElem(arr,0));
+        System.out.println("numEven -> " + numEven(arr,0));
+        reverse(arr,0);
+        System.out.print("reverse-> "+ Arrays.toString(arr));
+
     }
 
 }
