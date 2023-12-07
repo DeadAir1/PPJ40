@@ -55,7 +55,7 @@ public class Main {
     }
     //FUNKCJE DO ZADANIA 7
     public static int wordCount(String s){
-        int counter=0;
+        int counter=1;
         for (int i = 0; i <s.length() ; i++) {
             if(s.charAt(i)==' ' || s.charAt(i)==',' || s.charAt(i)==';' || s.charAt(i)=='.' )
                 ++counter;
@@ -101,7 +101,7 @@ public class Main {
             apple.show();*/
 
         //Zad 7
-            String s="I like programming,I think that the best language is Java;";
+            String s="I like programming,I think that the best language is Java";
         System.out.println(wordCount(s));
 
 
