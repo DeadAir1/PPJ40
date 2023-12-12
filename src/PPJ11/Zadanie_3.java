@@ -22,6 +22,19 @@ public class Zadanie_3 {
         return arr1;
     }
 
+    //FUNKCJA DO PUNKTU 1 WERSJA 2
+    static int[] add1(int arr[],int elem){
+        int arr1[]=new int[arr.length+1];
+        int index=0;
+        while(arr[index]<=elem){
+            index++;
+        }
+        System.arraycopy(arr,0,arr1,0,index);
+        arr1[index]=elem;
+        System.arraycopy(arr,index,arr1,index+1,arr.length-index);
+
+    return arr1;}
+
     //FUNKCJA DO PUNKTU 2
     static int[] delIndex(int arr[],int index){
         int arr1[]=new int[arr.length-1];
@@ -34,6 +47,15 @@ public class Zadanie_3 {
         }
     return arr1;
     }
+
+    //FUNKCJA DO PUNKTU 2 WERSJA 2
+    static int[] delIndex1(int arr[],int index){
+        int arr1[]=new int[arr.length-1];
+        System.arraycopy(arr,0,arr1,0,index);          //int arr[]={0,1,2,3,4,5,6,7,8,9};
+        System.arraycopy(arr,index+1,arr1,index,arr1.length-index);
+    return arr1;
+    }
+
     //FUNKCJA DO PUNKTU 3
     static int[] delFirst(int arr[],int e){
         if(arr[0]!=e)
@@ -79,10 +101,13 @@ public class Zadanie_3 {
     public static void main(String[] args) {
         int arr[]={0,1,2,3,4,5,6,7,8,9};
         int  elem=4;
+        info(arr);
         //Punkt 1
-      //  System.out.println(Arrays.toString(add(arr,elem)));
+      //  System.out.println(Arrays.toString(add(arr,elem)));info(arr);
+        //System.out.println(Arrays.toString(add1(arr,elem)));
         //Punkt 2
       //  System.out.println(Arrays.toString(delIndex(arr,elem)));
+        System.out.println(Arrays.toString(delIndex1(arr,elem)));
         //Punkt 3
        // System.out.println(Arrays.toString(delFirst(arr,elem)));
         //Punkt 4
@@ -90,6 +115,6 @@ public class Zadanie_3 {
         //Punkt 5
        // System.out.println(Arrays.toString(delAll(arr,elem)));
         //Punkt 6
-        info(arr);
+
     }
 }
