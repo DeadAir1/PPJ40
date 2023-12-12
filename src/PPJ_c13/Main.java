@@ -134,7 +134,7 @@ public class Main {
 
 
         //Zad 6
-        int wrt=-10;
+       /* int wrt=-10;
         int a[]=new int[9];
         int b[]=new int[10];
         for (int i = 0; i <a.length ; i++) {
@@ -145,7 +145,7 @@ public class Main {
         System.out.println(Arrays.toString(a));
         System.out.println(Arrays.toString(b));
 
-        System.out.println(Arrays.toString(func(a,b,wrt)));
+        System.out.println(Arrays.toString(func(a,b,wrt)));*/
 
     }
 }

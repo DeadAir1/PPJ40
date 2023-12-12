@@ -62,6 +62,8 @@ public class Main {
         }
     return counter;
     }
+
+    
     public static void main(String[] args) {
         //Zad 1
         /*int arr[]={1,5,7,9,4,2,6,3,8};

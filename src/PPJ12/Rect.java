@@ -1,6 +1,6 @@
 package PPJ12;
 
-public class Rect {
+public class   Rect {
     Point ul,br;
     Rect (Point ul,Point br){
         this.ul=ul;
@@ -10,7 +10,7 @@ public class Rect {
         System.out.println("UL -> " +'(' +ul.x +','+ul.y + ')' +"  BR - >" + '('+ br.x +','+br.y + ')');
     }
 
-    static Rect getRect(Point ul,int height,int width){
+    static Rect getRect(Point ul,int width,int height){
         Point br=new Point();
         br.x=ul.x+width;
         br.y=ul.y-height;
