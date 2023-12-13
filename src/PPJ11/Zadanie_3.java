@@ -67,6 +67,16 @@ public class Zadanie_3 {
 
     return arr1;
     }
+
+    //FUNKCJA DO PUNKTU 3 WERSJA 2
+    static int [] delFirst1(int arr[],int e){
+        if(arr[0]!=e)
+            return arr;
+        int arr1[]=new int[arr.length-1];
+        System.arraycopy(arr,1,arr1,0,arr1.length);
+       return arr1;
+    }
+    //FUNKCJA DO PUNKTU 4
     static int [] delLast(int arr[],int e){
         if(arr[arr.length-1]!=e)
             return arr;
@@ -76,7 +86,15 @@ public class Zadanie_3 {
             }
         return arr1;
     }
-    //FUNKCJA DO ZADANIA 5
+    //FUNKCJA DO PUNKTU 4 WERSJA 2
+    static int [] delLast1(int arr[],int e){
+        if(arr[arr.length-1]!=e)
+            return arr;
+        int arr1[]=new int[arr.length-1];
+        System.arraycopy(arr,0,arr1,0,arr1.length);
+        return arr1;
+    }
+    //FUNKCJA DO PUNKTU 5
     static int [] delAll(int arr[],int a){
         int counter=0;
         for (int i = 0; i <arr.length ; i++)
@@ -90,6 +108,24 @@ public class Zadanie_3 {
 
     return arr1;
     }
+
+    //FUNKCJA DO PUNKTU 5 WERSJA 2
+    static int [] delAll1(int arr[],int a) {
+        int counter=0;
+        int i=0;
+        while(arr[i]<=a){
+            i++;
+            if(arr[i]==a)
+                counter++;
+        }
+        if(counter==0)
+            return arr;
+        int arr1[]=new int[arr.length-counter];
+        System.arraycopy(arr,0,arr1,0,i-counter);
+        System.arraycopy(arr,i,arr1,i-counter,arr.length-i);
+            return arr1;
+    }
+
     //FUNKCJA DO PUNKTU 6
     static void info(int []arr){
         System.out.println(Arrays.toString(arr)+'\n'
@@ -99,22 +135,23 @@ public class Zadanie_3 {
 
 
     public static void main(String[] args) {
-        int arr[]={0,1,2,3,4,5,6,7,8,9};
-        int  elem=4;
+        int arr[]={0,1,2,3,4,4,6,7,8,9};
+        int  elem=4;       //i=6
         info(arr);
         //Punkt 1
       //  System.out.println(Arrays.toString(add(arr,elem)));info(arr);
         //System.out.println(Arrays.toString(add1(arr,elem)));
         //Punkt 2
       //  System.out.println(Arrays.toString(delIndex(arr,elem)));
-        System.out.println(Arrays.toString(delIndex1(arr,elem)));
+      //  System.out.println(Arrays.toString(delIndex1(arr,elem)));
         //Punkt 3
        // System.out.println(Arrays.toString(delFirst(arr,elem)));
+      //  System.out.println(Arrays.toString(delFirst1(arr,elem)));
         //Punkt 4
         //System.out.println(Arrays.toString(delLast(arr,9)));
+       // System.out.println(Arrays.toString(delLast1(arr,9)));
         //Punkt 5
        // System.out.println(Arrays.toString(delAll(arr,elem)));
-        //Punkt 6
-
+        //System.out.println(Arrays.toString(delAll1(arr,elem)));
     }
 }
