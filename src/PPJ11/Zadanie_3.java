@@ -80,7 +80,8 @@ public class Zadanie_3 {
     static int [] delLast(int arr[],int e){
         if(arr[arr.length-1]!=e)
             return arr;
-            int arr1[]=new int[arr.length-1];
+
+        int arr1[]=new int[arr.length-1];
             for (int i = 0; i <arr1.length ; i++) {
                 arr1[i]=arr[i];
             }
