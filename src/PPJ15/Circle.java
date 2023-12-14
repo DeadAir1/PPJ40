@@ -9,10 +9,10 @@ public class Circle {
         return radius;
     }
     double getArea(){
-        return 3.14*Math.pow(radius,2);
+        return Math.PI*Math.pow(radius,2);
     }
     double getPerimeter(){
-        return 2*3.14*radius;
+        return 2*Math.PI*radius;
     }
    public String toString(){
         return "Circlre with radius -> " + radius;
