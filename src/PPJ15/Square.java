@@ -6,6 +6,18 @@ public class Square {
     Square(double side){
         this.side=side;
     }
+    Square(Circle circle){
+        this.side=Math.sqrt(Math.PI*Math.pow(circle.getRadius(),2));
+    }
+
+    public static Circle[] getCircles(Square[] sqs) {
+        Circle[] circles=new Circle[sqs.length];
+        for (int i = 0; i <sqs.length ; i++) {
+            circles[i]=new Circle(sqs[i]);
+        }
+    return circles;
+    }
+
     double getSide(){
         return side;
     }
@@ -22,6 +34,6 @@ public class Square {
         return new Circle(side/2);
     }
     Circle getCircumscribedCircle(){
-        return new Circle((side*Math.sqrt(2))/2);
+        return new Circle((side*(Math.sqrt(2)))/2);
     }
 }

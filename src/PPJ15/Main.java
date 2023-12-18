@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         //Zad 1
-        Child[] children=new Child[3];
+      /*  Child[] children=new Child[3];
         Scanner scanner=new Scanner(System.in);
         for (int i = 0; i < children.length; i++) {
             System.out.print("Name of the child no " + i + " -> ");
@@ -23,7 +23,7 @@ public class Main {
             name2=scanner.next();
             Child.getChildByName(children,name1).givesCandyTo(Child.getChildByName(children,name2));
             Child.printChildren(children);
-        }
+        }*/
 
         //Zad 2
         // we want doubles to be printed with a dot
