@@ -8,6 +8,6 @@ public class CiagnikSiodlowy extends PojazdKolowy{
     }
 
     public void rozpocznijJazde(){
-     //   if()
+        if(su)
     }
 }
