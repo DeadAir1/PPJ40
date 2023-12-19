@@ -34,6 +34,6 @@ public class Square {
         return new Circle(side/2);
     }
     Circle getCircumscribedCircle(){
-        return new Circle((side*(Math.sqrt(2)))/2);
+        return new Circle((side*(Math.sqrt(2)) )/2);
     }
 }

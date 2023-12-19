@@ -36,8 +36,8 @@ public class Main {
       /*  Osoba osoba=new Osoba("Mike");
         Spawacz spawacz=new Spawacz("Ron",5);
         osoba.wyswietl();
-        spawacz.wyswietl();*/
-
+        spawacz.wyswietl();
+*/
 
 
 

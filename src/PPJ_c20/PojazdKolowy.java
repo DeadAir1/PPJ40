@@ -8,4 +8,7 @@ public class PojazdKolowy extends Pojazd{
         this.iloscOsi=ilosOsi;
     }
 
+    public int getIloscOsi() {
+        return iloscOsi;
+    }
 }

@@ -8,6 +8,8 @@ public class CiagnikSiodlowy extends PojazdKolowy{
     }
 
     public void rozpocznijJazde(){
-        if(su)
+        if(this.getIloscOsi()/masa>=11){
+            System.out.println("Jazda niebiezpieczna,odmowa uruchomienia silnika");
+        }
     }
 }
