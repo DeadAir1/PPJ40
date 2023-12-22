@@ -1,8 +1,6 @@
 package PPJ_c21.Zadanie_4;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Scanner;
 
 public class RachunekBankowy {
@@ -31,15 +29,19 @@ public class RachunekBankowy {
             BlednaOperacja operacja=new BlednaOperacja();
         }
     }
-    void aktualizacja() throws FileNotFoundException{
+    void aktualizacja()  {
         String info="Imie wlasciciela -> " + wlasciciel.imie +'\n'
                 + "Rachunek bankowy" + '\n'
                 + "Stan rachunku -> " + Math.round(stan);
                         System.out.println(info);
-              PrintWriter zapis=new PrintWriter("src/PPJ_c21/Zadanie_4/raport.txt");
-              zapis.println(info);
-              zapis.close();
-
-          }
+                            File file=new File("src/PPJ_c21/Zadanie_4/raport.txt");
+                            try{
+                            FileWriter zapis = new FileWriter("src/PPJ_c21/Zadanie_4/raport.txt", true);
+                            zapis.write(info + '\n');
+                            zapis.close();
+                                }catch(IOException e){
+                                e.printStackTrace();
+                            }
+    }
     }
 

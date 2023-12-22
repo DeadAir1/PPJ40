@@ -42,6 +42,11 @@ public class Main {
         rachunekBankowy.aktualizacja();
         RachunekBankowy rachunekBankowy1=new RachunekBankowy(new Osoba("Maja"),1);
         rachunekBankowy1.aktualizacja();
-
+        KontoVIP kontoVIP=new KontoVIP(new Osoba("Oleg"),1000,20,0);
+        kontoVIP.aktualizacja();
+        kontoVIP.przelew(rachunekBankowy,1005);
+        kontoVIP.aktualizacja();
+        kontoVIP.przelew(rachunekBankowy,1005);
+        kontoVIP.aktualizacja();
     }
 }
