@@ -11,11 +11,13 @@ public class Smartfon extends Komorka{
     }
     void zadzwon(String numer){
         System.out.println(numer);
-        if(this.historyIndeks>=0)
-            history[historyIndeks]=numer;
-        else{
+        if(this.historyIndeks>=0) {
+            history[historyIndeks] = numer;
+                historyIndeks--;
+        }        else{
             historyIndeks=9;
             history[historyIndeks]=numer;
+            historyIndeks--;
         }
     }
     void showHistory(){
