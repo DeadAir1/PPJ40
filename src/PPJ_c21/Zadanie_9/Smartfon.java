@@ -5,8 +5,9 @@ import java.util.Arrays;
 public class Smartfon extends Komorka{
 
     Osoba znajomi[]=new Osoba[10];
-    public Smartfon(String interfejsKomunikacyjny, String color) {
+    public Smartfon(String interfejsKomunikacyjny, String color,Osoba znajomi[]) {
         super(interfejsKomunikacyjny, color);
+        this.znajomi=znajomi;
     }
     void zadzwon(String numer){
         System.out.println(numer);
