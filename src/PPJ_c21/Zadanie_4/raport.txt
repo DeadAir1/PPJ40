@@ -1,0 +1,18 @@
+Imie wlasciciela -> Michal
+Rachunek bankowy
+Stan rachunku -> 1000
+Imie wlasciciela -> Maja
+Rachunek bankowy
+Stan rachunku -> 1
+Imie wlasciciela -> Oleg
+Rachunek bankowy
+Stan rachunku -> 1000
+Proby przekroczenia limitu 0
+Imie wlasciciela -> Oleg
+Rachunek bankowy
+Stan rachunku -> 1000
+Proby przekroczenia limitu 1
+Imie wlasciciela -> Oleg
+Rachunek bankowy
+Stan rachunku -> 1000
+Proby przekroczenia limitu 2
