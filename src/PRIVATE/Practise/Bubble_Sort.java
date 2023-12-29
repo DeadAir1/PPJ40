@@ -1,4 +1,4 @@
-package PRIVATE;
+package PRIVATE.Practise;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package PRIVATE;
+package PRIVATE.Practise;
 
 public class Main {
     public static void main(String[] args) {
