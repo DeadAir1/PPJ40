@@ -23,11 +23,24 @@ public class Note {
 
     }
 
+    public String getCreationDate() {
+        return creationDate;
+    }
+
     public String getName() {
         return name;
     }
 
     public String getPath() {
         return path;
+    }
+
+    @Override
+    public String toString() {
+        return
+                "Name = " + name + '\n' +
+                "Path = " + path + '\n' +
+                "CreationDate = " + creationDate + '\n' ;
+
     }
 }
