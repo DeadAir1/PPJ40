@@ -31,7 +31,7 @@ public class Note {
         return name;
     }
 
-    public String getPath() {
+     public String getPath() {
         return path;
     }
 
