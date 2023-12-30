@@ -6,10 +6,10 @@ import java.io.IOException;
 public class Note {
     private String name,path,creationDate;
 
-    public Note(String name,String creationDate) {
+    public Note(String name,String path,String creationDate) {
         this.name = name;
         this.creationDate = creationDate;
-        this.path="src/PRIVATE/Notepad" + "/"+ this.name + ".txt";
+        this.path=path;
         try{
             File file=new File(path);
             if(!file.exists()){
@@ -21,10 +21,6 @@ public class Note {
             ex.printStackTrace();
         }
 
-    }
-
-    public String getCreationDate() {
-        return creationDate;
     }
 
     public String getName() {
@@ -43,4 +39,10 @@ public class Note {
                 "CreationDate = " + creationDate + '\n' ;
 
     }
+    public String info(){
+        return name +'\n'
+                + path + '\n'
+                + creationDate;
+    }
+
 }

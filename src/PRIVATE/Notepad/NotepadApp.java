@@ -19,7 +19,7 @@ public class NotepadApp {
         System.out.print("Please  type a number,if you want to exit just type it :");
         Scanner in=new Scanner(System.in);
         int command=-1;
-        while((command= in.nextInt())!=7){
+        while((command= in.nextInt())!=8){
             switch (command ){
                 case 1: {
                     System.out.println("Please type title for your note:");
@@ -38,22 +38,26 @@ public class NotepadApp {
                 case 4:{
                     System.out.println("Please type the title of note you want write to:");
                     String title=in.next();
-                    FileManager fileManager=new FileManager(title,noteManager);
+                    FileManager fileManager=new FileManager(title);
                     fileManager.write();
                 }
                 break;
                 case 5: {
                     System.out.println("Please type the title of note you want read :");
                     String title=in.next();
-                    FileManager fileManager=new FileManager(title,noteManager);
+                    FileManager fileManager=new FileManager(title);
                     fileManager.read();
-            }
-            break;
-                case 6:
+                }
+                break;
+                case 6: {
                     noteManager.showListOfNotes();
+                }
                     break;
-                case 7:return;
-        }
+                case 7:{
+                    FileManager.rememberInformation();
+                    return;
+                }
+            }
 
 
 

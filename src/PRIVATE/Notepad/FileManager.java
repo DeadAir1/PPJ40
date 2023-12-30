@@ -5,15 +5,14 @@ import java.util.Scanner;
 
 public class FileManager {
     Note note;
-    NoteManager noteManager;
 
-    public FileManager(String title,NoteManager noteManager) {
-        this.noteManager=noteManager;
-        for (int i = 0; i <noteManager.listOfNotes.length ; i++) {
-            if(noteManager.listOfNotes[i]!=null){
-                if(noteManager.listOfNotes[i].getName().equals(title)){
-                    this.note=noteManager.listOfNotes[i];
-                    break;}
+    public FileManager(String title) {
+        for (int i = 0; i <NoteManager.listOfNotes.length ; i++) {
+            if(NoteManager.listOfNotes[i]!=null){
+                if(NoteManager.listOfNotes[i].getName().equals(title)){
+                    this.note=NoteManager.listOfNotes[i];
+                    break;
+                }
             }
         }
     }
@@ -48,6 +47,56 @@ public class FileManager {
         }catch(IOException e ){
             e.printStackTrace();
         }
+    }
+
+    static void rememberInformation(){
+        String path="src/PRIVATE/Notepad/special.txt";
+        try{
+            File file=new File(path);
+            if(!file.exists())
+                file.createNewFile();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        try{
+            PrintWriter printWriter=new PrintWriter(new FileWriter(path));
+            int i=0;
+            while(NoteManager.listOfNotes[i]!=null){
+                printWriter.println(NoteManager.listOfNotes[i].info());
+                i++;
+            }
+            printWriter.close();
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+
+    }
+    static Note[] getInformation(){
+            Note [] note=new Note[NoteManager.listOfNotes.length];
+        String path="src/PRIVATE/Notepad/special.txt";
+        try{
+            File file=new File(path);
+            if(file.exists()){
+                BufferedReader reader=new BufferedReader(new FileReader(path));
+                int index=0;
+                String line="";
+                while((line=reader.readLine())!= null){
+                    String name=line;
+                    line=reader.readLine();
+                    String path1=line;
+                    line=reader.readLine();
+                    String date=line;
+                    note[index]=new Note(name,path1,date);
+                    index++;
+                }
+            reader.close();
+            }
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    return  note;
     }
 
 }

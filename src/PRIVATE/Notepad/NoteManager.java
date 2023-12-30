@@ -7,12 +7,15 @@ public class NoteManager {
      static Note[] listOfNotes=new Note[10];
      static int index=0;
 
-     void create(String title){
+    public NoteManager() {
+        listOfNotes=FileManager.getInformation();
+    }
+
+    void create(String title){
         LocalDate date= LocalDate.now();
-        Note note= new Note(title, date.toString());
+        Note note= new Note(title,"src/PRIVATE/Notepad" + "/"+ title + ".txt", date.toString());
         listOfNotes[index]=note;
         index++;
-         System.out.println(index);
     }
      void delete(Note note){
 
@@ -26,10 +29,11 @@ public class NoteManager {
     }
     void showListOfNotes(){
         int i=0;
+        System.out.println("============");
        while(listOfNotes[i]!=null){
            System.out.println(listOfNotes[i].getName());
            i++;
        }
-        System.out.println("It's all");
+        System.out.println("============");
     }
 }
