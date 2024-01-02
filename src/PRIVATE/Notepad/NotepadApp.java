@@ -60,6 +60,7 @@ public class NotepadApp {
                     break;
                 case "exit":{
                     FileManager.rememberInformation();
+                    System.out.println("pussy");
                     return;
 
                 }
