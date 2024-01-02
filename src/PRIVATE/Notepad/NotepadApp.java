@@ -9,7 +9,7 @@ public class NotepadApp {
         );
         Scanner in=new Scanner(System.in);
         String command="";
-        while(!(command= in.nextLine()).equals("exit")){
+        while(!(command= in.nextLine()).equals("exit1")){
             switch (command ){
                 case "help":{
                     NoteManager.help();
@@ -31,15 +31,27 @@ public class NotepadApp {
                 case "write":{
                     System.out.println("Please type the title of note you want write to:");
                     String title=in.next();
+                    try{
                     FileManager fileManager=new FileManager(title);
                     fileManager.write();
+                    }
+                    catch (NullPointerException e){
+                            System.out.println("Note does not exist;");
+                            continue;
+                        }
                 }
                 break;
                 case "read"  : {
                     System.out.println("Please type the title of note you want read :");
                     String title=in.next();
+                    try{
                     FileManager fileManager=new FileManager(title);
                     fileManager.read();
+                    }
+                    catch (NullPointerException e){
+                        System.out.println("Note does not exist;");
+                        continue;
+                    }
                 }
                 break;
                 case "show my notes": {
@@ -49,6 +61,7 @@ public class NotepadApp {
                 case "exit":{
                     FileManager.rememberInformation();
                     return;
+
                 }
             }
 

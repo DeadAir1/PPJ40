@@ -4,12 +4,9 @@ import java.io.File;
 import java.time.LocalDate;
 
 public class NoteManager {
-     static Note[] listOfNotes=new Note[10];
+     static Note[] listOfNotes=FileManager.getInformation();
      static int index=0;
 
-    public NoteManager() {
-        listOfNotes=FileManager.getInformation();
-    }
 
    static void create(String title){
         LocalDate date= LocalDate.now();

@@ -17,7 +17,7 @@ public class FileManager {
         }
     }
 
-    void write(){
+    void write()throws NullPointerException{
         Scanner in=new Scanner(System.in);
         System.out.println("Please enter text that will be added to you note: \n" +
                 "If you want to finish write close:" );
@@ -34,7 +34,7 @@ public class FileManager {
             System.out.println("Your text was writted");
 
     }
-     void read(){
+     void read() throws NullPointerException{
         try {
            BufferedReader reader=new BufferedReader(new FileReader(this.note.getPath()));
             String line="";
@@ -73,7 +73,7 @@ public class FileManager {
 
     }
     static Note[] getInformation(){
-            Note [] note=new Note[NoteManager.listOfNotes.length];
+            Note [] note=new Note[10];
         String path="src/PRIVATE/Notepad/special.txt";
         try{
             File file=new File(path);
