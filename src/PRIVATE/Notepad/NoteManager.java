@@ -11,7 +11,7 @@ public class NoteManager {
         listOfNotes=FileManager.getInformation();
     }
 
-    void create(String title){
+   static void create(String title){
         LocalDate date= LocalDate.now();
         Note note= new Note(title,"src/PRIVATE/Notepad" + "/"+ title + ".txt", date.toString());
         listOfNotes[index]=note;
@@ -20,14 +20,14 @@ public class NoteManager {
      void delete(Note note){
 
     }
-     void review(String title){
+     static void review(String title){
          for (int i = 0; i < listOfNotes.length ; i++) {
              if(listOfNotes[i].getName().equals(title))
                  System.out.println(listOfNotes[i].toString());
              break;
          }
     }
-    void showListOfNotes(){
+    static void showListOfNotes(){
         int i=0;
         System.out.println("============");
        while(listOfNotes[i]!=null){
@@ -35,5 +35,18 @@ public class NoteManager {
            i++;
        }
         System.out.println("============");
+    }
+    static void help(){
+        System.out.println("This notepad, created by Oleksandr Voloshyn;\n" +
+                "Student of PJATK,student number s27565;\n"+
+                "Here you have 7 options: \n" +
+                "1.create;\n" +
+                "2.delete;\n" +
+                "3.review;\n" +
+                "4.write;\n" +
+                "5.read;\n" +
+                "6.show my notes;\n" +
+                "7.exit;"
+        );
     }
 }
