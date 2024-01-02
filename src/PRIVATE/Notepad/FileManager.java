@@ -17,7 +17,11 @@ public class FileManager {
         }
     }
 
-    void write()throws NullPointerException{
+    void write() throws NullPointerException{
+        if(this.note==null){
+            System.out.println("Note does not exists;");
+            return;
+        }
         Scanner in=new Scanner(System.in);
         System.out.println("Please enter text that will be added to you note: \n" +
                 "If you want to finish write close:" );
@@ -31,7 +35,7 @@ public class FileManager {
                     e.printStackTrace();
                 }
             }
-            System.out.println("Your text was writted");
+            System.out.println("Your text was written");
 
     }
      void read() throws NullPointerException{
