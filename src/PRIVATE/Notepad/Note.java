@@ -10,16 +10,21 @@ public class Note {
         this.name = name;
         this.creationDate = creationDate;
         this.path=path;
-        try{
-            File file=new File(path);
-            if(!file.exists()){
-                if(file.createNewFile() ) System.out.println("File created");
-                else System.out.println("File not created");
-            }else System.out.println("File exists");
-        }
-        catch (IOException ex ){
+        try {
+            File file = new File(path);
+            if (!file.exists()) {
+                if (file.createNewFile()) {
+                    System.out.println("File created");
+                } else {
+                    System.out.println("File not created");
+                }
+            } else {
+                System.out.println("File exists");
+            }
+        } catch (IOException ex) {
             ex.printStackTrace();
         }
+
 
     }
 

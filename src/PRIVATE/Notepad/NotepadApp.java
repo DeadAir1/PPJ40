@@ -19,8 +19,12 @@ public class NotepadApp {
                     String title=in.next();
                     NoteManager.create(title);
                 }break;
-                case "delete":
-                    System.out.println("Sorry i have no idea how to delete it");
+                case "delete": {
+                    System.out.println("Please type the title of note you want write to:");
+                    String title = in.next();
+                    FileManager fileManager = new FileManager(title);
+                    fileManager.delete();
+                }
                     break;
                 case "review":{
                     System.out.println("Please type the title of note to get info:");
@@ -60,7 +64,6 @@ public class NotepadApp {
                     break;
                 case "exit":{
                     FileManager.rememberInformation();
-                    System.out.println("pussy");
                     return;
 
                 }

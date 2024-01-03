@@ -5,16 +5,37 @@ import java.util.Scanner;
 
 public class FileManager {
     Note note;
+    static int index;
 
     public FileManager(String title) {
         for (int i = 0; i <NoteManager.listOfNotes.length ; i++) {
             if(NoteManager.listOfNotes[i]!=null){
                 if(NoteManager.listOfNotes[i].getName().equals(title)){
                     this.note=NoteManager.listOfNotes[i];
+                    index=i;
                     break;
                 }
             }
         }
+    }
+    void delete(){
+        if(this.note==null){
+            System.out.println("Note does not exists;");
+            return;
+        }
+        String path=this.note.getPath();
+            File file=new File(path);
+            if(file.delete()) System.out.println("Note was deleted;");
+            else System.out.println("Note was note deleted;");
+            Note noteList[]=new Note[NoteManager.listOfNotes.length];
+        for (int i = 0; i <NoteManager.listOfNotes.length ; i++) {
+            if(NoteManager.listOfNotes[i]!=null){
+            if(i<index) noteList[i]=NoteManager.listOfNotes[i];
+            else noteList[i]=NoteManager.listOfNotes[i+1];
+        }
+        }
+
+
     }
 
     void write() throws NullPointerException{

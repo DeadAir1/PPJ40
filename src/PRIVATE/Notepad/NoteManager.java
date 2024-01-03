@@ -14,9 +14,7 @@ public class NoteManager {
         listOfNotes[index]=note;
         index++;
     }
-     void delete(Note note){
 
-    }
      static void review(String title){
          for (int i = 0; i < listOfNotes.length ; i++) {
              if(listOfNotes[i].getName().equals(title))
