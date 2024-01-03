@@ -59,6 +59,19 @@ public class FileManager {
             System.out.println("Your text was written");
 
     }
+    void edit(){
+        try {
+            File file = new File(this.note.getPath());
+                if(file.exists()){
+                    ProcessBuilder processBuilder=new ProcessBuilder("nano",this.note.getPath());
+                    Process process= processBuilder.start();
+                    process.waitFor();
+                    System.out.println("Note edited;");
+                }else System.out.println("Note was not edited;");
+        }catch(IOException | InterruptedException e){
+            e.printStackTrace();
+        }
+    }
      void read() throws NullPointerException{
         try {
            BufferedReader reader=new BufferedReader(new FileReader(this.note.getPath()));

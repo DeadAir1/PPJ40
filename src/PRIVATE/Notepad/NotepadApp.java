@@ -20,7 +20,7 @@ public class NotepadApp {
                     NoteManager.create(title);
                 }break;
                 case "delete": {
-                    System.out.println("Please type the title of note you want write to:");
+                    System.out.println("Please type the title of note you want delete:");
                     String title = in.next();
                     FileManager fileManager = new FileManager(title);
                     fileManager.delete();
@@ -45,6 +45,12 @@ public class NotepadApp {
                         }
                 }
                 break;
+                case "edit" :{
+                    System.out.println("Please type the title of note you want edit:");
+                    String title=in.next();
+                    FileManager fileManager=new FileManager(title);
+                    fileManager.edit();
+                }break;
                 case "read"  : {
                     System.out.println("Please type the title of note you want read :");
                     String title=in.next();
