@@ -10,7 +10,7 @@ public class NoteManager {
 
    static void create(String title){
         LocalDate date= LocalDate.now();
-        Note note = new Note(title,"src/PRIVATE/Notepad" + "/"+ title + ".txt", date.toString());
+        Note note = new Note(title,"C:/Users/Public/Documents" + "/"+ title + ".txt", date.toString());
         listOfNotes[index]=note;
         index++;
     }

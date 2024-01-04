@@ -28,13 +28,13 @@ public class FileManager {
             if(file.delete()) System.out.println("Note was deleted;");
             else System.out.println("Note was note deleted;");
             Note noteList[]=new Note[NoteManager.listOfNotes.length];
-        for (int i = 0; i <NoteManager.listOfNotes.length ; i++) {
-            if(NoteManager.listOfNotes[i]!=null){
+        for (int i = 0; i <NoteManager.listOfNotes.length-1 ; i++) {
             if(i<index) noteList[i]=NoteManager.listOfNotes[i];
             else noteList[i]=NoteManager.listOfNotes[i+1];
-        }
-        }
 
+        }
+        NoteManager.listOfNotes=noteList;
+        rememberInformation();
 
     }
 
@@ -88,7 +88,7 @@ public class FileManager {
     }
 
     static void rememberInformation(){
-        String path="src/PRIVATE/Notepad/special.txt";
+        String path="C:/Users/Public/Documents/special.txt";
         try{
             File file=new File(path);
             if(!file.exists())
@@ -112,7 +112,7 @@ public class FileManager {
     }
     static Note[] getInformation(){
             Note [] note=new Note[10];
-        String path="src/PRIVATE/Notepad/special.txt";
+        String path="C:/Users/Public/Documents/special.txt";
         try{
             File file=new File(path);
             if(file.exists()){
