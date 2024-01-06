@@ -43,12 +43,14 @@ public class SortedSLL {
 
             static void show(Node head){
                while(head!=null){
-                   System.out.println(head.data);
+                   System.out.print(head.data + " ");
                    head=head.next;
                }
             }
-   /* static Node[] extract(Node head){
+    static Node[] extract(Node head){
+        Node [] nodes=new Node[2];
 
-    }*/
+
+    return nodes; }
 
 }
