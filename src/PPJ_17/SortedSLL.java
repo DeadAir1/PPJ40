@@ -6,6 +6,7 @@ public class SortedSLL {
             SortedSLL(){
                 this.head=null;
             }
+            //FUNKCJA DO ZADANIA 1
             void addSorted(int data){
                 if(head==null || data<=head.data){
                     head=new Node(data,head);
@@ -24,17 +25,30 @@ public class SortedSLL {
                         }
                         tmp1.next=tmp;
                     }
-
-
                 }
 
             }
-            void show(){
-                Node tmp=head;
-               while(tmp!=null){
-                   System.out.println(tmp.data);
-                   tmp=tmp.next;
+
+            //FUNKCJA DO ZADANIA 2
+
+            static Node arrayToList(int arr[]){
+                SortedSLL sortedSLL=new SortedSLL();
+                Node tmp=new Node(arr[arr.length-1],null);
+                for (int i = arr.length-2; i >0 ; i--) {
+                    tmp=new Node(arr[i],tmp);
+                }
+                sortedSLL.head=new Node(arr[0],tmp);
+                return sortedSLL.head;
+            }
+
+            static void show(Node head){
+               while(head!=null){
+                   System.out.println(head.data);
+                   head=head.next;
                }
             }
+   /* static Node[] extract(Node head){
+
+    }*/
 
 }
