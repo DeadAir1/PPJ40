@@ -26,7 +26,7 @@ public class FileManager {
         String path=this.note.getPath();
             File file=new File(path);
             if(file.delete()) System.out.println("Note was deleted;");
-            else System.out.println("Note was note deleted;");
+            else System.out.println("Note was not deleted;");
             Note noteList[]=new Note[NoteManager.listOfNotes.length];
         for (int i = 0; i <NoteManager.listOfNotes.length-1 ; i++) {
             if(i<index) noteList[i]=NoteManager.listOfNotes[i];

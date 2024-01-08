@@ -17,10 +17,15 @@ public class NoteManager {
 
      static void review(String title){
          for (int i = 0; i < listOfNotes.length ; i++) {
-             if(listOfNotes[i].getName().equals(title))
+             if(listOfNotes[i]!=null){
+             if(listOfNotes[i].getName().equals(title)){
                  System.out.println(listOfNotes[i].toString());
              break;
-         }
+             }
+             }
+         } System.out.println("Note was not found!");
+
+
     }
     static void showListOfNotes(){
         int i=0;

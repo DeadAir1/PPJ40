@@ -1,7 +1,6 @@
-package PRIVATE.Practise.FileStream;
+package PRIVATE.FileStream;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
