@@ -2,8 +2,14 @@ package PRIVATE.TaskManager;
 
 public class TaskManager {
     private Task task;
-    public TaskManager(Task task) {
-        this.task = task;
+    public TaskManager(String title) {
+        for (int i = 0; i <ListofTasks.list.length ; i++) {
+                if(ListofTasks.list[i]!=null){
+                    if(ListofTasks.list[i].equals(title))
+                        this.task= ListofTasks.list[i];
+                }
+        }if(this.task==null) throw new TaskNotFound("Task was not found in list!");
+
     }
     
      public void setPriority(String priority){
@@ -14,5 +20,8 @@ public class TaskManager {
             case "LOW" -> Task.Priority.LOW;
             default -> throw new PriorityException("An Impossible priority!");
         };
+    }
+    public void taskEdit(Task task){
+        System.out.println("This task information: " + '\n' + task.toString());
     }
 }

@@ -1,10 +1,15 @@
 package PRIVATE.TaskManager;
 
 public class ListofTasks {
-    static Task listOfTasks[] = new Task[10];
+    static Task[] list=new Task[10];
+    static Task[] historyList=new Task[10];
     static int index=0;
-    public void add(Task task){
-        listOfTasks[index]=task;
+    static int historyIndex=0;
+
+    private ListofTasks() {
+        }
+        static public void add(Task task){
+        list[index]=task;
         index++;
     }
 }

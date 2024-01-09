@@ -32,8 +32,14 @@ public class TaskManagerApp {
                          task=new Task(title,text);
                     }else
                          task = new Task(title);
-
-                    TaskManager taskManager=new TaskManager(task);
+                    ListofTasks.add(task);
+                    TaskManager taskManager;
+                    try {
+                         taskManager = new TaskManager(title);
+                    }catch(TaskNotFound e){
+                        System.out.println(e.toString());
+                        continue;
+                    }
                     System.out.println("Priority for your task is low,do you want to set another priority?Y/N");
                     ans=in.next().charAt(0);
                     if(ans=='Y' || ans =='y'){
@@ -42,6 +48,17 @@ public class TaskManagerApp {
                     }
                 }
                 break;
+                case "edit":{
+                    String title=in.next();
+                    TaskManager taskManager;
+                    try {
+                        taskManager = new TaskManager(title);
+                    }catch(TaskNotFound e){
+                        System.out.println(e.toString());
+                        continue;
+                    }
+                    System.out.println("Its okay;");
+                }
                 case "exit" : {
                     System.out.println("Program closed!");
                     return;
