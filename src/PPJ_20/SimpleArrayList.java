@@ -68,7 +68,7 @@ public class SimpleArrayList {
     public SimpleArrayList insert(int ind, int e){
         int wrt[]={e};
         return insert(ind,wrt);
-    }
+    }//gouytg
  public SimpleArrayList append(int e){
         this.arr[this.size]=e;
         this.size++;
