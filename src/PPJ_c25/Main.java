@@ -44,7 +44,7 @@ public class Main {
         }*/
 
         //Zad 3
-    String name="inputData.txt";
+/*    String name="inputDataX.txt";
     int arr[]=new int[10];
     for (int i = 0; i < name.length(); i++) {
             File file=new File("src/PPJ_c25/"+name.charAt(i) +".txt");
@@ -58,18 +58,68 @@ public class Main {
             try{
             FileWriter fileWriter=new FileWriter(file.getPath());
             for (int j = 0; j < arr.length; j++) {
-                arr[i]=(int)(Math.random()*1000-1);
-
+                arr[j]=(int)(Math.random()*1000-1);
             }
+                for (int j = 0; j < arr.length-1; j++) {
+                    for (int k = i; k < arr.length; k++) {
+                        if(arr[k]<arr[j]){
+                            int t=arr[k];
+                            arr[k]=arr[j];
+                            arr[j]=t;
+                        }
+                    }
+                }
+                for (int j = 0; j <arr.length ; j++) {
+                    fileWriter.write(arr[j] + "");
+                    fileWriter.write('\n');
+                }
+                fileWriter.close();
+
 
         }catch(IOException e){
             e.printStackTrace();
         }
 
+      }*/
+        //Zad 4
+       /* String name="inputDataX.txt";
+        int arr[]=new int[name.length()];
+        File[] fileArr=new File[name.length()];
+        for (int i = 0; i < name.length(); i++) {
+            fileArr[i] = new File("src/PPJ_c25/" + name.charAt(i) + ".txt");
         }
+        for (int i = 0; i < fileArr.length ; i++) {
+            try{
+              BufferedReader bufferedReader=new BufferedReader(new FileReader(fileArr[i].getPath()));
+              String line= bufferedReader.readLine();
+              arr[i]=Integer.parseInt(line);
+          } catch (IOException e){
+              e.printStackTrace();
+          }
+            System.out.println(Arrays.toString(arr));
+
+            for (int j = 0; j < arr.length-1; j++) {
+                for (int k = j; k <arr.length ; k++) {
+                    if(arr[k]<arr[j]){
+                        int t=arr[k];
+                        arr[k]=arr[j];
+                        arr[j]=t;
+                    }
+                }
+            }
+            try {
+                FileWriter fileWriter = new FileWriter("src/PPJ_c25/numbers.txt",true);
+                for (int j = 0; j <arr.length ; j++) {
+                    fileWriter.write(arr[j] + "");
+                    fileWriter.write('\n');
+                }
+                fileWriter.close();
+            }catch(IOException e){
+                e.printStackTrace();
+            }
 
 
-
+    }*/
     }
 
 }
