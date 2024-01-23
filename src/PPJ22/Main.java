@@ -24,6 +24,18 @@ public class Main {
         }catch (IOException e){
             e.printStackTrace();
         }*/
+        //Zad 2
+        try{
+            BufferedReader bufferedReader =new BufferedReader(new FileReader("src/PPJ22/file.txt"));
+            String line;
+            while((line= bufferedReader.readLine())!=null){
+                String name;
+                int birthYear;
+                String make;
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
 
     }
 }
