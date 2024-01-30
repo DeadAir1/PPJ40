@@ -2,6 +2,7 @@ package PPJ_c25;
 
 import java.io.*;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -44,24 +45,17 @@ public class Main {
         }*/
 
         //Zad 3
-/*    String name="inputDataX.txt";
+ /*   String name="inputDataX.txt";
     int arr[]=new int[10];
     for (int i = 0; i < name.length(); i++) {
             File file=new File("src/PPJ_c25/"+name.charAt(i) +".txt");
-            if(!file.exists()){
-                try{
-                file.createNewFile();
-            }catch(IOException e){
-                    e.printStackTrace();
-                }
-            }
             try{
             FileWriter fileWriter=new FileWriter(file.getPath());
             for (int j = 0; j < arr.length; j++) {
                 arr[j]=(int)(Math.random()*1000-1);
             }
                 for (int j = 0; j < arr.length-1; j++) {
-                    for (int k = i; k < arr.length; k++) {
+                    for (int k = j+1; k < arr.length; k++) {
                         if(arr[k]<arr[j]){
                             int t=arr[k];
                             arr[k]=arr[j];
@@ -82,44 +76,69 @@ public class Main {
 
       }*/
         //Zad 4
-       /* String name="inputDataX.txt";
-        int arr[]=new int[name.length()];
-        File[] fileArr=new File[name.length()];
-        for (int i = 0; i < name.length(); i++) {
-            fileArr[i] = new File("src/PPJ_c25/" + name.charAt(i) + ".txt");
-        }
-        for (int i = 0; i < fileArr.length ; i++) {
-            try{
-              BufferedReader bufferedReader=new BufferedReader(new FileReader(fileArr[i].getPath()));
-              String line= bufferedReader.readLine();
-              arr[i]=Integer.parseInt(line);
-          } catch (IOException e){
-              e.printStackTrace();
-          }
-            System.out.println(Arrays.toString(arr));
-
-            for (int j = 0; j < arr.length-1; j++) {
-                for (int k = j; k <arr.length ; k++) {
-                    if(arr[k]<arr[j]){
-                        int t=arr[k];
-                        arr[k]=arr[j];
-                        arr[j]=t;
-                    }
+    /*     String name="inputData.txt";
+       int arr[]=new int[9];
+       int indexs[]=new int[9];
+       boolean finished=false;
+        Arrays.fill(arr, -1);
+        while(!finished) {
+            finished=true;
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] == -1) {
+                    arr[i]=read("src/PPJ_c25/" + name.charAt(i) + ".txt", indexs[i]);
+                indexs[i]++;
                 }
             }
-            try {
-                FileWriter fileWriter = new FileWriter("src/PPJ_c25/numbers.txt",true);
-                for (int j = 0; j <arr.length ; j++) {
-                    fileWriter.write(arr[j] + "");
-                    fileWriter.write('\n');
+            int min=1000;
+            int counter=0;
+            for (int i = 0; i <arr.length ; i++) {
+                if(arr[i]<min && indexs[i]!=10) {min=arr[i];
+                counter=i;
                 }
+
+            }
+            System.out.println(min);
+            try {
+                FileWriter fileWriter = new FileWriter("src/PPJ_c25/file.txt",true);
+                fileWriter.write(min + " ");
+                fileWriter.write('\n');
+                arr[counter]=-1;
                 fileWriter.close();
             }catch(IOException e){
                 e.printStackTrace();
             }
+            for (int i = 0; i < indexs.length ; i++) {
+                if(indexs[i]!=10) finished=false;
+            }
+        }*/
+        //Zad 5
+        InputStream stream=System.in;
+        int a=0;
+        try {
+            a=stream.read();
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        System.out.println(a);
 
 
-    }*/
+
     }
+    public static int read(String path,int index){
+        if(index>10) return -1;
+        String result=" ";
+        int ans=0;
+        try{
+            BufferedReader bufferedReader=new BufferedReader(new FileReader(path));
+            for (int i = 0; i <= index; i++) {
+                result= bufferedReader.readLine();
+            }
+            if(!(result.equals(" "))) ans=Integer.parseInt(result);
+        }catch(IOException e){
+            e.printStackTrace();
+        }
 
+   return ans;
+    }
 }

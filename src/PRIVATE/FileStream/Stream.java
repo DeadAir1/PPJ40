@@ -13,6 +13,7 @@ public class Stream {
             FileOutputStream fileOutputStream=new FileOutputStream("src/PRIVATE/Practise/FileStream/out.bin");
             for (int i = 24; i >=0; i-=8) {
                     fileOutputStream.write((wrt >> i) & 0xFF);
+                    //00000000 00000000 00000000 00000000
             }
             fileOutputStream.close();
             FileInputStream fileInputStream=new FileInputStream("src/PRIVATE/Practise/FileStream/out.bin");
