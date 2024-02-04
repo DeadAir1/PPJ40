@@ -1,6 +1,6 @@
 package PPJ23;
 
-public class Main {
+public class    Main {
     public static void main(String[] args) {
         //Zad1
      /*   int n=1437226410;
@@ -45,22 +45,26 @@ public class Main {
 
     }
     public static int pack (int y1,int m1,int d1,int y2,int m2,int d2 ){
-        int period=0;
-        y1=y1 & 0xF;
-            y2=y2 & 0xF;
-            period=(period | y1) << 7;
-            period=(period | m1) << 4;
-            period=(period | y1) << 5;
-        period=(period | y2) << 7;
-        period=(period | m2) << 4;
-        period=(period | y2) ;
+        int data=0;
+        y1-=2000;
+        y2-=2000;
+            data=(data | y1);
+            data=(data << 4) | m1;
+            data=(data << 5) | d1;
+        data=(data << 7 ) | y2;
+        data=(data << 4) | m2;
+        data=(data << 5) | d2;
 
 
-        return period;
+        return data;
     }
     private static void showPeriod(int period) {
-        System.out.println(
-
-        );
-    }
+        int d2=period & 0b11111;
+        int m2=(period >> 5) & 0b1111;
+        int y2=(period >> 9) & 0b1111111;
+        int d1=(period >> 16) & 0b11111;
+        int m1=(period >> 21) & 0b1111;
+        int y1=(period >> 25) & 0b1111111;
+        System.out.printf("%d/%d/%d - %d/%d/%d",y1+2000,m1,d1,y2+2000,m2, d2);
+}
 }
